@@ -8,12 +8,12 @@ let username = params.get("name");
 
 // 限制用户名长度，避免页面样式崩坏
 const maxLength = 20;
-const safeUsername = username ? username.substring(0, maxLength) : "???";
+const safeUsername = "乖乖";
 
-// 防止 `null` 变成 `"null"`
-if (username) {
-  questionText.innerText = questionText.innerText + safeUsername;
-}
+// // 防止 `null` 变成 `"null"`
+// if (username) {
+//   questionText.innerText = questionText.innerText + safeUsername;
+// }
 
 let clickCount = 0; // 记录点击 No 的次数
 
@@ -49,12 +49,21 @@ noButton.addEventListener("click", function () {
   }
 
   // 图片变化（前 5 次变化）
-  if (clickCount === 1) mainImage.src = "images/fail1.gif"; // 再次确认，期待
-  if (clickCount === 2) mainImage.src = "images/fail2.gif"; // 俏皮掩饰，希望成功
+  if (clickCount === 1) {
+    mainImage.src = "images/fail1.gif"; // 再次确认，期待
+    questionText.innerText = "乖乖大美女，我会一直一直对你好，只爱你一个人，做我女朋友好不好？";
+  }
+  if (clickCount === 2) {
+        mainImage.src = "images/fail2.gif"; // 俏皮掩饰，希望成功
+        questionText.innerText = "乖乖大美女，求求你了，做我女朋友好不好？";
+  }
   if (clickCount === 3) mainImage.src = "images/fail3.gif"; // 委屈
   if (clickCount === 4) mainImage.src = "images/fail4.gif"; // 哭
   if (clickCount === 5) mainImage.src = "images/fail5.gif"; // 之后一直是哭
-  if (clickCount >= 6) noButton.style.display = "none";     // 点击第六次之后，就只能同意
+  if (clickCount >= 6) {
+      noButton.style.display = "none";
+      yesButton.innerText = "好，我答应你！";
+    }
 });
 
 // Yes 按钮点击后，进入表白成功页面
