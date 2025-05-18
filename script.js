@@ -51,13 +51,16 @@ noButton.addEventListener("click", function () {
   // 图片变化（前 5 次变化）
   if (clickCount === 1) {
     mainImage.src = "images/fail1.gif"; // 再次确认，期待
-    questionText.innerText = "乖乖大美女，我会一直一直对你好，只爱你一个人，做我女朋友好不好？";
+    questionText.innerText = "乖乖，我会一直一直对你好，只爱你一个人，做我女朋友好不好？";
   }
   if (clickCount === 2) {
         mainImage.src = "images/fail2.gif"; // 俏皮掩饰，希望成功
-        questionText.innerText = "乖乖大美女，求求你了，做我女朋友好不好？";
+        questionText.innerText = "乖乖大美女，给你买好多好吃的，做我女朋友好不好？";
   }
-  if (clickCount === 3) mainImage.src = "images/fail3.gif"; // 委屈
+  if (clickCount === 3) {
+     mainImage.src = "images/fail3.gif"; // 委屈
+     questionText.innerText = "乖乖大美女，求求你了，做我女朋友好不好？";
+  }
   if (clickCount === 4) mainImage.src = "images/fail4.gif"; // 哭
   if (clickCount === 5) mainImage.src = "images/fail5.gif"; // 之后一直是哭
   if (clickCount >= 6) {
