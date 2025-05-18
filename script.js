@@ -53,7 +53,8 @@ noButton.addEventListener("click", function () {
   if (clickCount === 2) mainImage.src = "images/fail2.gif"; // 俏皮掩饰，希望成功
   if (clickCount === 3) mainImage.src = "images/fail3.gif"; // 委屈
   if (clickCount === 4) mainImage.src = "images/fail4.gif"; // 哭
-  if (clickCount >= 5) mainImage.src = "images/fail5.gif"; // 之后一直是哭
+  if (clickCount === 5) mainImage.src = "images/fail5.gif"; // 之后一直是哭
+  if (clickCount >= 6) noButton.style.display = "none";     // 点击第六次之后，就只能同意
 });
 
 // Yes 按钮点击后，进入表白成功页面
